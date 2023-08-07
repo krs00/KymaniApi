@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using KymaniApi.Models;
+using KymaniApi.Models; 
 
 namespace KymaniApi.Controllers
 {
