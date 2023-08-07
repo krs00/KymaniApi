@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using KymaniApi.Models; 
+using KymaniApi.Models;
 
 namespace KymaniApi.Controllers
 {
@@ -17,16 +17,16 @@ namespace KymaniApi.Controllers
 
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Kymani>>> Get(string mood, int powerLevel)
+    public async Task<ActionResult<IEnumerable<Kymani>>> Get([FromQuery] string mood = null, [FromQuery] int powerLevel = 0)
     {
       IQueryable<Kymani> query = _db.Kymanis.AsQueryable();
 
-      if (mood != null)
+      if (!string.IsNullOrEmpty(mood)) 
       {
         query = query.Where(entry => entry.Mood == mood);
       }
 
-      if (powerLevel != null)
+      if (powerLevel != 0)
       {
         query = query.Where(entry => entry.PowerLevel == powerLevel);
       }
