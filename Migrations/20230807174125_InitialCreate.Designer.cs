@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KymaniApi.Migrations
 {
     [DbContext(typeof(KymaniApiContext))]
-    [Migration("20230807171858_InitialCreate")]
+    [Migration("20230807174125_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
