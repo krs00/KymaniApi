@@ -19,7 +19,7 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Add CORS configuration
-app.UseCors(builder => builder.WithOrigins("http://localhost:5173") // Enable CORS
+app.UseCors(builder => builder.WithOrigins("http://127.0.0.1:5173") // Enable CORS
                               .AllowAnyHeader()
                               .AllowAnyMethod());
 
