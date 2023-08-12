@@ -131,6 +131,9 @@ This URL will retrieve a list of all kymanis with a powerlevel of 15.
 
 ## Known bugs
 
+- none
+
+
 ## License
 
 [MIT](https://opensource.org/license/mit/)
