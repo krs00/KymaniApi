@@ -79,6 +79,8 @@ The Kymani API provides the following endpoints for interacting with kymani data
 - PUT /api/kymanis/{id}: Updates the information of a specific kymani.
 - DELETE /api/kymanis/{id}: Deletes a specific kymani.
 
+## Endpoints for KymaniApi
+
 1. Retrieve All Kymanis
 To retrieve a list of all Kymanis, make a GET request to the /api/kymanis endpoint:
 
