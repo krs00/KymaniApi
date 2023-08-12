@@ -67,7 +67,7 @@ dotnet ef database update
 
 ## Using This API
 
-# Set Up
+### Set Up
 Before you start, ensure you have the following in place:
 
 A running instance of the Kymani API on your local machine or a remote server.
