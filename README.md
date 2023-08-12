@@ -67,14 +67,45 @@ dotnet ef database update
 
 ## Using This API
 
-The Kymani API provides the following endpoints for interacting with kymani data:
+# Set Up
+Before you start, ensure you have the following in place:
 
+A running instance of the Kymani API on your local machine or a remote server.
+A tool for making HTTP requests like cURL or Postman.
+
+The Kymani API provides the following endpoints for interacting with kymani data:
 - GET /api/kymanis: Retrieves a list of all kymanis.
 - GET /api/kymanis/{id}: Retrieves the details of a specific kymani.
 - PUT /api/kymanis/{id}: Updates the information of a specific kymani.
 - DELETE /api/kymanis/{id}: Deletes a specific kymani.
 
-To use these endpoints, you can send HTTP requests to the corresponding URLs using tools like Postman or cURL.
+1. Retrieve All Kymanis
+To retrieve a list of all Kymanis, make a GET request to the /api/kymanis endpoint:
+
+- GET http://localhost:5000/api/kymanis
+
+2. Retrieve a Specific Kymani
+To retrieve details about a specific Kymani, replace {id} with the Kymani's ID and make a GET request to the /api/kymanis/{id} endpoint:
+
+- GET http://localhost:5000/api/kymanis/{id}
+
+3. Update a Kymani
+To update information about a Kymani, replace {id} with the Kymani's ID and make a PUT request to the /api/kymanis/{id} endpoint. Provide the updated data in the request body:
+
+- PUT http://localhost:5000/api/kymanis/{id}
+
+```json
+{
+  "Mood": "happy",
+  "PowerLevel": 8
+}
+```
+
+4. Delete a Kymani
+To delete a Kymani, replace {id} with the Kymani's ID and make a DELETE request to the /api/kymanis/{id} endpoint:
+
+- DELETE http://localhost:5000/api/kymanis/{id}
+
 
 ## Query Parameters
 
@@ -90,6 +121,12 @@ GET http://localhost:5000/api/kymanis?mood=cool
 ```
 
 This URL will retrieve a list of cool kymanis.
+
+```
+GET http://localhost:5000/api/kymanis?powerlevel=15
+```
+
+This URL will retrieve a list of all kymanis with a powerlevel of 15.
 
 
 ## Known bugs
