@@ -1,7 +1,5 @@
 # Kymani Api
 
-### By Kymani Stephens
-
 ## Description
 
 The Kymani API is a RESTful web service designed to manage Kymani data.
