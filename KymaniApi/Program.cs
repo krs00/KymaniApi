@@ -26,7 +26,11 @@ app.UseCors(builder => builder.WithOrigins("http://localhost:5173") // Enable CO
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Kymani API V1");
+    });
+
 }
 else
 {
