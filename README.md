@@ -10,6 +10,9 @@ The Kymani API is a RESTful web service designed to manage Kymani data.
 - .NET
 - ASP.NET Core 
 - Entity Framework Core
+- Docker
+- Docker-compose
+- Github Actions
 
 ## Database Structure
 
@@ -127,11 +130,6 @@ GET http://localhost:5000/api/kymanis?powerlevel=15
 ```
 
 This URL will retrieve a list of all kymanis with a powerlevel of 15.
-
-
-## Known bugs
-
-- none
 
 
 ## License
