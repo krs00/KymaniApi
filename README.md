@@ -68,6 +68,27 @@ dotnet ef database update
 
 ## Using This API
 
+### Environment Variables
+
+The Kymani API requires the following environment variables to be set:
+
+- `MYSQL_ROOT_PASSWORD`: Password for the MySQL root user.
+- `MYSQL_DATABASE`: Name of the MySQL database.
+- `MYSQL_USER`: Username for connecting to the MySQL database.
+- `MYSQL_PASSWORD`: Password for the MySQL user.
+
+### Customization
+
+The provided Docker Compose file (`docker-compose.yml`) includes placeholders for the required environment variables, but it doesn't include actual values for security reasons.
+
+To set up your own environment variables, follow these steps:
+
+1. Create a `.env` file in the same directory as the `docker-compose.yml` file.
+2. Open the `.env` file in a text editor.
+3. Replace the placeholders with your actual values. For example:
+
+After setting up your environment variables, use the `docker-compose` command to start the Kymani API.
+
 ### Set Up
 Before you start, ensure you have the following in place:
 
