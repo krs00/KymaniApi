@@ -1,0 +1,94 @@
+openapi: 3.0.0
+info:
+  title: Kymani API
+  description: RESTful web service for managing Kymani data
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000
+paths:
+  /api/kymanis:
+    get:
+      summary: Retrieve a list of all Kymanis
+      operationId: getAllKymanis
+      responses:
+        '200':
+          description: List of Kymanis
+    parameters:
+      - name: mood
+        in: query
+        description: Filter Kymanis by mood
+        schema:
+          type: string
+      - name: powerlevel
+        in: query
+        description: Filter Kymanis by powerlevel
+        schema:
+          type: integer
+  /api/kymanis/{id}:
+    get:
+      summary: Retrieve details of a specific Kymani
+      operationId: getKymaniById
+      parameters:
+        - name: id
+          in: path
+          description: ID of the Kymani
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Kymani details
+    put:
+      summary: Update information of a specific Kymani
+      operationId: updateKymaniById
+      parameters:
+        - name: id
+          in: path
+          description: ID of the Kymani
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/KymaniUpdate'
+      responses:
+        '204':
+          description: Kymani updated successfully
+    delete:
+      summary: Delete a specific Kymani
+      operationId: deleteKymaniById
+      parameters:
+        - name: id
+          in: path
+          description: ID of the Kymani
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Kymani deleted successfully
+components:
+  schemas:
+    KymaniUpdate:
+      type: object
+      properties:
+        Mood:
+          type: string
+        PowerLevel:
+          type: integer
+  parameters:
+    mood:
+      name: mood
+      in: query
+      description: Filter Kymanis by mood
+      schema:
+        type: string
+    powerlevel:
+      name: powerlevel
+      in: query
+      description: Filter Kymanis by powerlevel
+      schema:
+        type: integer
